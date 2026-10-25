@@ -1,0 +1,62 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="#0B1220">
+
+    <ScrollView
+        android:id="@+id/logScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/command_container"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/label_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#DCE7F7"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:textIsSelectable="true"
+            android:ellipsize="none"
+            android:singleLine="false" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/command_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="6dp">
+
+        <EditText
+            android:id="@+id/edit_command"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Masukkan command..."
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#8292AA"
+            android:backgroundTint="#3984F5"
+            android:inputType="text"
+            android:imeOptions="actionSend" />
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/button_send" />
+
+    </LinearLayout>
+
+</RelativeLayout>
