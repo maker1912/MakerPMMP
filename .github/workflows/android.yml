@@ -29,8 +29,9 @@ jobs:
         with:
           packages: 'platform-tools'
 
+
       - name: Install Android SDK 21
-        run: sdkmanager "platforms;android-21" "build-tools;30.0.3"
+        run: sdkmanager "platforms;android-21" "build-tools;21.1.0"
 
       - name: Setup Java 8 for legacy Gradle
         uses: actions/setup-java@v4
