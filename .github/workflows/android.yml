@@ -51,8 +51,9 @@ jobs:
           ldd "$ANDROID_HOME/build-tools/21.1.0/aapt" || true
    
 
+      
       - name: Build debug APK
-        run: chmod +x gradlew && ./gradlew assembleDebug
+        run: chmod +x gradlew && ./gradlew assembleDebug --stacktrace --info
 
       - name: Upload APK
         if: success()
